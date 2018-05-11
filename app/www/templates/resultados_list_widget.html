@@ -1,0 +1,18 @@
+<div class="item item-balanced item-divider">
+  Familia: {{prod.familiaName}}
+</div>
+<div class="card">
+  <div class="item item-divider">
+        Código N° {{prod.id_sigla}}
+  <span class="badge badge-balanced">Stock: {{prod.stock}} {{prod.stock_um}}</span>
+  </div>
+  <div class="item item-text-wrap">
+    {{prod.descpal}}
+    <a class="item item-avatar" ng-click="abrirImgProductoModal($index)">
+      <img alt="error" ng-src='{{prod.ruta_mini}}' />
+      {{prod.descsec}}</a>
+    <p>Sub-Familia o Línea: {{prod.subfamiliaName}}</p>
+    <p>Volumen rep. con embalaje: {{prod.volumen}} {{prod.volumen_um}}</p>
+    <p>Peso rep. con embalaje: {{prod.Peso}} {{prod.peso_um}}</p>
+  </div>
+</div>

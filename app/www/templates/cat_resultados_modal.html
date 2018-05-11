@@ -1,0 +1,33 @@
+
+<div class="modal">
+<ion-view cache-view="false" view-title="Productos">
+
+  <!-- Modal header bar -->
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">Resultados</h1>
+    <button class="button button-clear button-positive" ng-click="cerrar_cat_resultados_modal()">Cerrar</button>
+  </ion-header-bar>
+
+  <!-- Modal content area -->
+  <ion-content>
+    <div ng-show="!cat_resultados.length" class="row">
+      <div class="col">
+        <div class="text-center">
+          <h4>Sin resultados</h4>
+        </div>
+      </div>
+    </div>
+
+    <ion-list ng-show="cat_resultados.length" id="resultadoslist">
+      <ion-item ng-repeat="prod in cat_resultados">
+        <resultados-list-widget></resultados-list-widget>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll
+        icon="ion-loading-c"
+        on-infinite="getMore()"
+        distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
+</div>

@@ -1,0 +1,24 @@
+<div class="modal">
+
+  <!-- Modal header bar -->
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">Actividades #{{otp.numero}}</h1>
+    <button class="button button-clear button-positive" ng-click="cerrarActividades()">Cerrar</button>
+  </ion-header-bar>
+
+  <!-- Modal content area -->
+  <ion-content>
+    <div ng-show="!actividades.length" class="row">
+      <div class="col">
+        <div class="text-center">
+          <h4>Sin resultados</h4>
+        </div>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="act in actividades">
+          {{act.descripServicio}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>

@@ -1,0 +1,32 @@
+  <div class="modal">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-secondary">
+      <h1 class="title">Ultimas Averías</h1>
+      <button class="button button-clear button-positive" ng-click="cerrarUltimasOTC()">Cerrar</button>
+    </ion-header-bar>
+
+    <div class="bar bar-subheader">
+      <h2 class="title">Equipo:{{equipo}}</h2>
+    </div>
+    <!-- Modal content area -->
+    <ion-content class="has-subheader">
+      <div ng-show="!ultimasOtc.length" class="row">
+        <div class="col">
+          <div class="text-center">
+            <h4>Sin resultados</h4>
+          </div>
+        </div>
+      </div>
+      <ion-list>
+        <ion-item ng-repeat="uotc in ultimasOtc">
+          <div class="item item-divider">
+            N°{{uotc.nNumero}} - ({{uotc.cAtendido | date : 'dd/MM/yyyy' }})
+          </div>
+          <a class="item  item-text-wrap">
+            <p>{{uotc.cObservacion}}</p>
+          </a>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </div>

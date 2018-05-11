@@ -1,0 +1,68 @@
+<ion-view cache-view="false" view-title="Resultados">
+  <ion-nav-title>
+        <div class="logoIcon">Resultados</div>
+  </ion-nav-title>
+  <ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+
+<!-- <ion-refresher
+  pulling-text="Deslice hacia abajo para actualizar..."
+  on-refresh="getList()">
+</ion-refresher>
+<div ng-show="!cat_resultados.length" class="row">
+  <div class="col">
+    <div class="text-center">
+      <h4>Sin resultados</h4>
+    </div>
+  </div>
+</div> -->
+
+<!-- <ion-list ng-show="cat_resultados.length" id="resultadoslist"> -->
+
+   <ion-list>
+
+      <!-- <ion-item ng-repeat="prod in cat_resultados" href="#/app/cat_resultados/{{prod.id}}"> -->
+      <ion-item ng-repeat="prod in cat_resultados">
+        <!-- <resultados-list-widget></resultados-list-widget> -->
+        <div class="item item-calm item-divider">
+          Familia: {{prod.familia_id}}
+        </div>
+        <div class="card">
+          <div class="item item-divider">
+                Código N° {{prod.cod_sigla}}
+                <!-- Código N° {{prod.cod_sigla}} -->
+          </div>
+          <div class="item item-text-wrap">
+            <a class="item item-avatar" ng-click="abrirImgProductoModal()"><img src="/img/img_ejemplo1.png" />
+              <h2>Descripción principal:</h2>{{prod.desc_princ}}
+              <!-- <h2>Descripción secundaria:</h2>{{prod.desc_sec}}
+              <h2>Sub-Familia o Línea:</h2>{{prod.subfamilia_id}}
+              <h2>Volumen del repuesto con embalaje:</h2>{{prod.volumen}}
+              <h2>Peso del repuesto con embalaje:</h2>{{prod.Peso}}
+              <h2>Stock + Unidad de medida:</h2>{{prod.stock}} -->
+            </a>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+
+
+
+
+
+    <!-- <ion-infinite-scroll
+        icon="ion-loading-c"
+        on-infinite="getMore()"
+        distance="1%">
+    </ion-infinite-scroll> -->
+
+
+  </ion-content>
+</ion-view>

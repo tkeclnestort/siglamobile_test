@@ -1,0 +1,83 @@
+<ion-view>
+  <ion-nav-title>
+        <div class="logoIcon">Avería N°{{otc.numero}}</div>
+  </ion-nav-title>
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Estado
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otc.estado.nombre}}</p>
+      </label>
+      <div class="item item-divider">
+        Equipo
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otc.descEquipo}} - {{otc.referenciaEquipo}} - {{otc.ubicacionEquipo}}</p>
+      </label>
+      <div class="item item-divider">
+        Problema
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otc.situacion}}</p>
+      </label>
+      <div class="item item-divider">
+        Edificio / Lugar
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otc.direccion}}</p>
+      </label>
+      <div class="item item-divider">
+        Tipo de Contrato
+      </div>
+      <label class="item item-text-wrap">
+        <!-- <p>{{otc.tipoContrato}}</p> -->
+        <p>{{otc.contrato}}</p>
+      </label>
+      <div class="item item-divider">
+        Prioridad
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otc.prioridad}}</p>
+      </label>
+      <div class="item item-divider">
+        Relato de Cliente
+      </div>
+      <label class="item">
+        <button ng-click="mostrarRelatoCliente()" class="button button-block icon-right ion-chevron-right button-positive">Mostrar</button>
+      </label>
+      <div class="item item-divider">
+        Ultimas Aver&iacute;as
+      </div>
+      <label class="item">
+        <button  ng-click="mostrarUltimasOTC()" class="button button-block icon-right ion-chevron-right button-positive">Mostrar</button>
+      </label>
+      <div class="item item-divider"></div>
+      <label class="item" ng-if="otc.estado_id==0">
+        <button ng-click="aceptarOT()" class="button button-block icon-right ion-chevron-right button-balanced">Aceptar</button>
+      </label>
+      <label class="item" ng-if="otc.estado_id==1">
+        <button ng-click="estoyAquiOT()" class="button button-block icon-right ion-chevron-right button-positive">Estoy Aquí</button>
+      </label>
+      <label class="item" ng-if="otc.estado_id==1">
+        <button disabled="true" ng-click="rechazarOT()" class="button button-block icon-right ion-chevron-right button-assertive">Rechazar</button>
+      </label>
+      <label class="item" ng-if="otc.estado_id==2">
+        <button ng-click="mostrarCuadroFinalizarModal()" class="button button-block icon-right ion-chevron-right button-balanced">Finalizar</button>
+      </label>
+      <label class="item" ng-if="otc.estado_id==2">
+        <button disabled="true" ng-click="rechazarOT()" class="button button-block icon-right ion-chevron-right button-assertive">Rechazar</button>
+      </label>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,92 @@
+<ion-view cache-view="false">
+  <ion-nav-title>
+        <div class="logoIcon">Parte Nro:{{otp.numero}}</div>
+  </ion-nav-title>
+  <ion-nav-bar class="bar-calm">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Estado
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otp.estado.nombre}}</p>
+      </label>
+      <div class="item item-divider">
+        Equipo - Ubicaci&oacute;n
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otp.descEquipo}} - {{otp.referenciaEquipo}} - {{otp.ubicacionEquipo}}</p>
+      </label>
+      <div class="item item-divider">
+        Tipo de Equipo
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otp.tipoEquipo}}</p>
+      </label>
+      <!-- <div class="item item-divider">
+        Estado del Equipo
+      </div>
+      <a class="item">
+        <p>{{otp.situacion}}</p>
+      </a> -->
+      <div class="item item-divider">
+        Fecha Programada
+      </div>
+      <label class="item">
+        <p>{{otp.fecProgramada}}</p>
+      </label>
+      <div class="item item-divider">
+        Obra
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otp.nombreObra}}</p>
+      </label>
+      <div class="item item-divider">
+        Direcci&oacute;n
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otp.direccion}}</p>
+      </label>
+      <div class="item item-divider">
+        Tipo de Mantenimiento
+      </div>
+      <label class="item item-text-wrap">
+        <p>{{otp.tipoMantenimiento}}</p>
+      </label>
+      <div class="item item-divider">
+        Actividades
+      </div>
+      <label class="item">
+        <button ng-click="mostrarActividades()" class="button button-block icon-right ion-chevron-right button-energized">Mostrar</button>
+      </label>
+      <div class="item item-divider">
+        Ultimas Aver&iacute;as
+      </div>
+      <label class="item">
+        <button ng-click="mostrarUltimasOTC()" class="button button-block icon-right ion-chevron-right button-positive">Mostrar</button>
+      </label>
+      <div class="item item-divider">
+
+      </div>
+      <label class="item" ng-if="otp.estado_id==0">
+        <button ng-click="iniciarOT()" class="button button-block icon-right ion-chevron-right button-balanced">Iniciar</button>
+      </label>
+      <label class="item" ng-if="otp.estado_id==2 || otp.estado_id==3">
+        <button ng-click="mostrarCuadroFinalizarModal()" class="button button-block icon-right ion-chevron-right button-balanced">Finalizar</button>
+      </label>
+      <label class="item" ng-if="otp.estado_id==2 || otp.estado_id==3">
+        <button ng-click="pausarOT()" class="button button-block icon-right ion-chevron-right button-calm">Pausar</button>
+      </label>
+      <label class="item" ng-if="otp.estado_id==4">
+        <button ng-click="continuarOT()" class="button button-block icon-right ion-chevron-right button-balanced">Continuar</button>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

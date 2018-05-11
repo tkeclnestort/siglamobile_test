@@ -1,0 +1,40 @@
+
+<div class="modal">
+
+  <!-- Modal header bar -->
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">Relato de Cliente</h1>
+    <button class="button button-clear button-positive" ng-click="cerrarRelatoCliente()">Cerrar</button>
+  </ion-header-bar>
+
+  <!-- Modal content area -->
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Avería
+      </div>
+      <a class="item">
+        <p>{{otc.numero}}</p>
+      </a>
+      <div class="item item-divider">
+        Solicitante
+      </div>
+      <a class="item">
+        <p>{{otc.solicitante}}</p>
+      </a>
+      <div class="item item-divider">
+        Telefono
+      </div>
+      <a class="item">
+        <p>{{otc.telefono}}</p>
+      </a>
+      <div class="item item-divider">
+        Descripción
+      </div>
+      <a class="item item-text-wrap">
+        <p>{{otc.descripcionRelato}}</p>
+      </a>
+    </div>
+  </ion-content>
+
+</div>

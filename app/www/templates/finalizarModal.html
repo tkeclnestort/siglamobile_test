@@ -1,0 +1,42 @@
+<div class="modal">
+
+  <!-- Modal header bar -->
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">Cerrar Nº {{finalizarModel.numero}}</h1>
+    <button class="button button-clear button-positive" ng-click="cerrarCuadroFinalizarModal()">Cerrar</button>
+  </ion-header-bar>
+
+  <!-- Modal content area -->
+  <ion-content>
+    <form name="frmFinalizarOrden" ng-submit="finalizarOrden()" novalidate>
+      <div class="list">
+        <div class="item item-divider">Observaciones</div>
+        <label class="item item-input">
+          <textarea rows="4" ng-model="finalizarModel.obs" placeholder="Ingrese una observaci&oacute;n"></textarea>
+        </label>
+
+        <div class="item item-divider">Situaci&oacute;n de Equipo</div>
+        <div class="item item-input item-select">
+          <span class="input-label">Estado final: </span>
+          <select ng-model="finalizarModel.situacion" ng-options="e as e.descrip for e in estadossit track by e.sigla_id" ng> </select>
+        </div>
+  
+
+        <ion-toggle class="item item-divider div-toggle" ng-model="finalizarModel.generaReq">Generar Requerimiento</ion-toggle>
+        <div class="check-element animate-show" ng-show="finalizarModel.generaReq">
+          <label class="item item-input item-select">Tipo:
+            <select ng-model="finalizarModel.idReq" ng-required='finalizarModel.tipo == 1'>
+              <option ng-repeat="r in listaRequerimientos" ng-value="r.id">{{ r.descrip }}</option>
+            </select>
+          </label>
+          <label class="item item-input">
+            <textarea rows="4" ng-model="finalizarModel.obsReq" placeholder="Observaciones del Requerimiento"></textarea>
+          </label>
+        </div>
+        <label class="item">
+          <button ng-click="submit" class="button button-block icon-right ion-ios-checkmark-outline button-balanced">Finalizar</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</div>

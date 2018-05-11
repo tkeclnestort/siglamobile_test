@@ -1,0 +1,54 @@
+<ion-view view-title="Cat&aacute;logo">
+  <ion-nav-title>
+        <div class="logoIcon">Cat&aacute;logo</div>
+  </ion-nav-title>
+  <ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content>
+    <form>
+    <div class="item item-divider">
+      Familia de Productos
+      <button modal-select ng-model="filtrosProd.familia" options="familiasSeleccionables" modal-title="Seleccione una Familia" reset-button="Ninguno" cancel-button="Volver" cancel-search-button="Limpiar"  has-search="true" search-placeholder="Buscar" load-list-message="Cargando" class="button button-block  button-outline icon-right ion-chevron-right button-balanced">
+        {{ filtrosProd.familia.nombre || &apos;Seleccionar&apos; | limitTo: 40 }}
+        <div class="option">
+          <h2>{{option.nombre}}</h2>
+        </div>
+      </button>
+    </div>
+    <div class="item item-divider">
+      SubFamilia o línea
+      <button modal-select ng-model="filtrosProd.subfamilia" options="subfamiliasSeleccionables" modal-title="Seleccione Subfamilia o Línea" reset-button="Ninguno" cancel-button="Volver" cancel-search-button="Limpiar" has-search="true" search-placeholder="Buscar" load-list-message="Cargando" class="button button-block  button-outline icon-right ion-chevron-right button-balanced">
+        {{ filtrosProd.subfamilia.nombre || &apos;Seleccionar&apos; | limitTo: 40 }}
+        <div class="option">
+          <h2>{{option.nombre}}</h2>
+        </div>
+      </button>
+    </div>
+    <div class="item item-divider">Código SIGLA</div>
+    <label class="item item-input">
+      <textarea ng-model="filtrosProd.cod_sigla" rows="3" placeholder="Ingrese código"></textarea>
+    </label>
+    <div class="item item-divider">Descripción Principal</div>
+    <label class="item item-input">
+      <textarea ng-model="filtrosProd.desc_princ" rows="3" placeholder="Ingrese descripción"></textarea>
+    </label>
+    <div class="item item-divider">Descripción Secundaria</div>
+    <label class="item item-input">
+      <textarea ng-model="filtrosProd.desc_sec" rows="3" placeholder="Ingrese descripción"></textarea>
+    </label>
+    <div class="item item-divider">País: {{filtrosProd.pais_nombre}}
+      <button class="button button-block button-balanced" ng-click="buscarProductos()" type="submit">Buscar</button>
+    </div>
+  </form>
+    <!-- <div class="row">
+      <div class="col">
+        <a href="#/app/resultados" class="button button-block icon-right ion-chevron-right button-balanced">Buscar</a>
+      </div>
+    </div> -->
+  </ion-content>
+</ion-view>

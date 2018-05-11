@@ -1,0 +1,76 @@
+/* Empty. Add your own CSS if you like */
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.login {
+    background: url(../img/ThyssenkruppLogo_azul.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 250px;
+}
+
+.loginTest {
+    background: url(../img/thyssenkrupp_test.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    min-height: 300px;
+}
+
+.logoTkeAzul {
+    background: url(../img/TkeLogo_azul.png);
+    background-repeat: no-repeat;
+    background-size: 34px;
+    /*background-position: right;*/
+    min-width: 34px;
+}
+
+.logoTkeBlanco {
+    background: url(../img/TkeLogo_blanco.png);
+    background-repeat: no-repeat;
+    background-size: 34px;
+    min-width: 34px;
+}
+.tke-bg {
+    background-color:#ffffff;
+}
+
+#otclist > div.list > .item > a.item-content,
+#resultadoslist > div.list > .item > a.item-content,
+#otplist > div.list > .item > a.item-content
+{
+  padding:0 !important;
+}
+
+.div-toggle{
+  padding-top:14px;
+  padding-bottom:14px;
+}
+
+div.card {
+  margin: 10px 5px;
+}
+
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.check-element {
+  padding: 10px;
+}

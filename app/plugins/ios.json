@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.thyssenkrupp.test.siglamobile"
+        }
+    },
+    "dependent_plugins": {}
+}
